@@ -1,0 +1,24 @@
+# Binaries
+bin/
+*.out
+
+# Go
+*.o
+*.a
+*.so
+.DS_Store
+vendor/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+
+# Generated
+go.sum

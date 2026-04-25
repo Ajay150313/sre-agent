@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRE Agent - AI-Powered Incident Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 SRE Agent</h1>
+            <p>Autonomous AI-powered incident analysis for modern infrastructure</p>
+            <div class="badge">Open Source</div>
+        </header>
+
+        <main>
+            <section class="status-card">
+                <h2>System Status</h2>
+                <div id="status-indicator" class="status-healthy">● Healthy</div>
+                <p>Connected to Prometheus: <span id="prom-url">Loading...</span></p>
+            </section>
+
+            <section class="actions">
+                <button id="analyze-btn" class="btn-primary">🔍 Analyze Active Alerts</button>
+                <button id="refresh-btn" class="btn-secondary">🔄 Refresh</button>
+            </section>
+
+            <section class="incidents">
+                <h2>Active Incidents</h2>
+                <div id="incidents-list" class="incident-list">
+                    <div class="empty-state">No active incidents detected</div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built for SREs, by SREs • <a href="https://github.com/sravanthigorantla/sre-agent">Star on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
