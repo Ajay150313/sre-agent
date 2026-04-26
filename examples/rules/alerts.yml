@@ -1,0 +1,17 @@
+groups:
+- name: system_alerts
+  interval: 15s
+  rules:
+  
+  - alert: NodeCPUHigh
+    expr: (100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)) > 80
+    for: 5m
+    annotations:
+      summary: "CPU usage is {{ $value }}% on {{ $labels.instance }}"
+      description: "Instance {{ $labels.instance }} CPU is above 80%"
+  
+  - alert: NodeMemoryHigh
+    expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+    for: 5m
+    annotations:
+      summary: "Memory usage is {{ $value }}% on {{ $labels.instance }}"
