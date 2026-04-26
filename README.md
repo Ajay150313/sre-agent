@@ -74,4 +74,4 @@ We welcome contributions!
 
 ## 📄 License
 
-MIT © Sravanth Gorantla
+MIT © AJay Devineni
